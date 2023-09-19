@@ -50,6 +50,8 @@ body{
   color: #fff;
   text-align: center;
   padding: 100px 0;
+  height: 70vh;
+  width: 100%;
 }
 
 .home h1{
@@ -62,57 +64,100 @@ body{
   margin-top: 20px;
 }
 
+span{
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 24ch;
+  animation: typing 2s steps(30),
+  blink .5s infinite step-end alternate;
+  overflow: hidden;
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 20rem;
+  margin-top: 10rem;
+}
+
+@keyframes typing{
+  from {width: 0;}
+}
+
+@keyframes blink{
+  50% { border-color: transparent;}
+}
+
+
 
 /*=====================Estilo de About=====================================================*/
 
-.about{
-  padding: 50px 0;
+
+/* Estilo para el contenedor principal */
+.portfolioSection {
+  display: flex;
+  justify-content: space-between; /* Coloca el texto y la imagen en lados opuestos */
+  align-items: center; /* Centra verticalmente el contenido */
+  padding: 20px;
+  margin-top: 5rem;
 }
 
-.about h2{
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 20px;
+/* Estilo para el texto "About Me" */
+.about-me {
+  flex: 1; /* El texto ocupará todo el espacio disponible en el lado izquierdo */
+  text-align: left; /* Alinea el texto a la izquierda */
 }
 
-.about p{
-  font-size: 18px;
-  text-align: center;
+/* Estilo para el contenedor de la imagen */
+.image-container {
+  flex: 1; /* La imagen ocupará todo el espacio disponible en el lado derecho */
+  text-align: center; /* Alinea la imagen al centro horizontalmente */
 }
+
+/* Estilo para la imagen SVG */
+.image-container img {
+  max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+  height: auto; /* Mantiene la proporción de aspecto de la imagen */
+}
+
+
 
 /*=====================Estilo de skills=====================================================*/
 
-.skills{
+.skills {
   text-align: center;
   padding: 20px;
   margin: 20px;
   background-color: #f9f9f9;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  
+  display: inline-block;
+  width: calc(33.33% - 40px); /* Ancho de cada tarjeta */
+  min-width: 200px; /* Ancho mínimo para evitar estrechamiento excesivo */
+  box-sizing: border-box;
+  height: auto; /* Altura automática */
+  vertical-align: top; /* Alineación vertical superior */
+  float: left; /* Hace que las tarjetas floten hacia la izquierda */
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-
-.skills i{
+.skills i {
   font-size: 36px;
   color: #ff5722;
 }
 
-.skills h4{
+.skills h4 {
   font-size: 24px;
   margin-top: 20px;
-  
 }
 
-.skills p{
+.skills p {
   font-size: 16px;
   margin-top: 10px;
 }
+
 
 /*=====================Estilo de card de blog=====================================================*/
 
@@ -186,3 +231,254 @@ body{
 .article a:hover{
   text-decoration: underline;
 }
+
+/*PROJECTS*/
+
+/* Estilos para la sección de proyectos */
+.projects-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center; /* Alinea las tarjetas horizontalmente */
+}
+
+/* Estilos para las tarjetas de proyecto */
+.project-card {
+  width: 200px; /* Ancho fijo para las tarjetas */
+  height: 200px; /* Altura fija para las tarjetas (cuadradas) */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+  display: inline-block; /* Alinea las tarjetas de forma horizontal */
+  vertical-align: top; /* Alinea las tarjetas en la parte superior */
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.project-card img {
+  max-width: 100%;
+  max-height: 100%; /* Ajusta la imagen al tamaño de la tarjeta */
+}
+
+
+/*RESPONSIVOOOO*/
+
+
+@media screen and (max-width: 768px) {
+  /* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Menú */
+.navbar {
+  padding: 1rem;
+}
+
+.navbar-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.navbar-title {
+  justify-self: start;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-menu {
+  justify-self: end;
+  display: flex;
+  list-style: none;
+}
+
+.navbar-menu li {
+  padding: 0 1rem;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-menu li:hover {
+  background: #eee;
+}
+
+/* Estilo de portada */
+.home {
+  background-image: url('./assets/img/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+  height: auto;
+}
+
+.home h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.home p {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+span {
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 24ch;
+  animation: typing 2s steps(30),
+    blink .5s infinite step-end alternate;
+  overflow: hidden;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Estilo de About */
+.portfolioSection {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección del contenido en dispositivos móviles */
+  align-items: center;
+  padding: 20px;
+  margin-top: 2rem; /* Reduce el margen en dispositivos móviles */
+}
+
+.about-me {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo de skills */
+.skills {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%; /* Ancho completo en dispositivos móviles */
+  height: auto;
+  vertical-align: top;
+  margin-top: 20px;
+}
+
+.skills h4 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Estilo de card de blog */
+.blog {
+  display: flex;
+  flex-direction: column; /* Cambia la dirección del contenido en dispositivos móviles */
+  margin: 20px;
+}
+
+.title-blog {
+  text-align: center;
+  font-size: 24px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+/* Estilo del blog */
+.article {
+  text-align: center;
+  color: #888;
+  font-size: 18px;
+}
+
+.article h1 {
+  font-size: 24px;
+}
+
+.article a {
+  text-decoration: none;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* Estilo de la sección de proyectos */
+.projects-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-card {
+  width: 100%; /* Ancho completo en dispositivos móviles */
+  height: auto; /* Altura automática en dispositivos móviles */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px 0; /* Margen superior e inferior en dispositivos móviles */
+}
+
+.project-card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+  }
+
+
+
+
+
+
