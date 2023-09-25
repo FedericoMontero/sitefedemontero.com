@@ -124,8 +124,7 @@ const Home = () => {
 
 
 //Componente Blog
-
-/*const Blog = () => {
+const Blog = () => {
   
   const articles = [
     {id:1, title:'Titulo 1', content:'Contenido1'},
@@ -174,7 +173,7 @@ const Article = ({ match }) => {
       <Link to="/blog">Volver al blog</Link>
     </div>
   )
-}*/
+}
 
 const Projects = () => {
   return (
@@ -212,7 +211,14 @@ const App = () => {
 
             <div className='navbar-title'>Federico Montero</div>
 
-            
+            <ul className='navbar-menu'>
+              <li>
+                <Link to="/">Inicio</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+            </ul>
           </div>
         </nav>
 
@@ -225,7 +231,8 @@ const App = () => {
               <Projects/>
             </Container>
           }/>
-          
+          <Route path='/blog' exact Component={Blog}/>
+          <Route path='/blog/:id' element={<Article/>}/>
         </Routes>
 
         <Footer/>

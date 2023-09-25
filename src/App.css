@@ -338,7 +338,7 @@ span {
   animation: typing 2s steps(30),
     blink .5s infinite step-end alternate;
   overflow: hidden;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   margin: 20px auto;
 }
@@ -383,7 +383,7 @@ span {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: block;
-  width: 100%; /* Ancho completo en dispositivos móviles */
+  width: 90%; /* Ancho completo en dispositivos móviles */
   height: auto;
   vertical-align: top;
   margin-top: 20px;
@@ -456,15 +456,16 @@ span {
 
 /* Estilo de la sección de proyectos */
 .projects-section {
-  background-color: #f0f0f0;
-  padding: 20px;
+  background-color:#fff ;
+  padding: 25px;
+  margin-right: 15px;
   text-align: center;
 }
 
 .project-card {
   width: 100%; /* Ancho completo en dispositivos móviles */
   height: auto; /* Altura automática en dispositivos móviles */
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
   margin: 10px 0; /* Margen superior e inferior en dispositivos móviles */
