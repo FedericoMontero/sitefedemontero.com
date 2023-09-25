@@ -20,7 +20,7 @@ const Footer = () => {
         <p>This website is developed by me &#128640; from UY &#128205;</p>
         <div className="footer-links">
           <a
-            href="https://www.linkedin.com/tu-perfil-de-linkedin"
+            href="https://uy.linkedin.com/in/federico-montero-7b026516a"
             target="_blank"
             rel="noopener noreferrer"
             style={linkStyle}
@@ -28,7 +28,7 @@ const Footer = () => {
             LinkedIn
           </a>
           <a
-            href="https://github.com/tu-usuario-de-github"
+            href="https://github.com/FedericoMontero"
             target="_blank"
             rel="noopener noreferrer"
             style={linkStyle}
